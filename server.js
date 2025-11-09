@@ -20,9 +20,7 @@ app.use("/", createProxyMiddleware({
   }
 }));
 
-const port = process.env.PORT || 10000;
-app.listen(port, () => console.log(`✅ Proxy ativo na porta ${port}`));
-
-app.listen(10000, () => {
-  console.log("✅ Proxy rodando na porta 10000");
+const PORT = process.env.PORT || 10000; // usa a porta do Render ou 10000 localmente
+app.listen(PORT, () => {
+    console.log(`✅ Proxy ativo na porta ${PORT}`);
 });
